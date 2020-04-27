@@ -1,0 +1,170 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #eff3f5, #bfd4c8);
+    --popup-background-color:#555;
+    --popup-error-background-color:rgba(160, 12, 12, 0.705);
+    --popup-color:#fff;
+    --popup-border-color:rgb(49, 49, 49);
+    --popup-error-border-color:rgb(228, 17, 10);
+    --popup-top:60px;
+    --info-width:265px;
+    --popup-before-border:5px;
+}
+.signup{
+    /* margin: 0 auto; */
+    /* width: ; */
+    width: calc(var(--info-width)*3);
+    margin-left: 6%;
+    /* margin-right: 50%;   */
+}
+
+.info-span
+{
+    width: var(--info-width);
+    display :inline-block;
+}
+.popup-span
+{
+    width: var(--info-width*1.5);
+    display: inline-block;
+}
+.logo{
+    /* border: 5px; */
+    height: 40px;
+}
+.logotext{
+    margin-left: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#signup-popup{
+    /* position: absolute;
+
+    top: var(--popup-top); */
+
+    /* height: 82px; */
+}
+#login-popup{
+    /* position: relative;
+
+    top: var(--popup-top); */
+
+}
+
+#signup-popup-error{
+    /* position: absolute;
+    top:60px; */
+}
+.popup {
+    /* margin-left: 6%;
+    margin-right: 50%; */
+    /* widows: 300px;
+    visibility: hidden;
+    cursor: pointer;
+    background-color: var(--popup-background-color);
+    color: var(--popup-color);
+    text-align: left;
+    border-radius: 4px;
+    position: relative;
+    font-size: small;
+    left: 40%; */
+    visibility: hidden;
+    background-color: var(--popup-background-color);
+    color: var(--popup-color);
+    cursor: pointer;
+    font-size: small;
+    margin:10px;
+    padding:8px 8px 8px 0px;
+    border-radius: 5px;
+    text-align: left;
+    margin-left:var(--popup-before-border);
+}
+.popup::before{
+    /* content: "";
+    position: relative;
+
+    display: inline-block;
+
+    border-width: 6px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent var(--popup-background-color) transparent transparent ; */
+    content:"";
+    display: inline-block;
+    position: relative;
+    border-style: solid;
+    border-width: var(--popup-before-border);
+    border-color: transparent var(--popup-background-color) transparent transparent ;
+    right: 10px;
+}
+
+
+.popup-error{
+    /* visibility: visible;
+    background-color: var(--popup-error-background-color);
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--popup-error-border-color); */
+    visibility: hidden;
+    background-color: var(--popup-error-background-color);
+    border-color: var(--popup-error-border-color);
+    border-width: 1px;
+    border-style: solid;
+}
+.popup-error::before{
+    border-color: transparent var(--popup-error-background-color) transparent transparent;
+}
+
+
+.show{
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+.text-error{
+    /* border-top-width: 1px; */
+    /* border-bottom-width: 1px; */
+    /* border-width: 1px;
+    border-radius: 4px;
+    padding-left: 11px;
+    padding-right: 9px;
+    height: 23px;
+    width: 239px;
+    border-style: solid; */
+    border-radius: 4px;
+    border-style: solid;
+    border-color: crimson;
+    /* box-sizing: content-box; */
+}
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+@keyframes fadeIn {
+from {opacity: 0;}
+to {opacity:1 ;}
+}
+
+
+input[type=text], input[type=password]{
+    padding: 6px 10px;
+    margin: 6px 0;
+    display: inline-block;
+    /* border: 1px #ccc; */
+    /* border-radius: 4px; */
+    /* box-sizing: border-box; */
+}
+.button{
+    width: 265px;
+    height: 45px;
+    font-size: 23px;
+    text-align: center;
+    border-style: groove;
+    border-color: rgb(205, 243, 230);
+    border-radius: 30px;
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+}
